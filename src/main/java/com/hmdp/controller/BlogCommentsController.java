@@ -1,9 +1,12 @@
 package com.hmdp.controller;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.hmdp.dto.Result;
+import com.hmdp.entity.BlogComments;
+import com.hmdp.service.IBlogCommentsService;
+import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.RestController;
+import javax.annotation.Resource;
 
 /**
  * <p>
@@ -17,4 +20,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/blog-comments")
 public class BlogCommentsController {
 
+    @Resource
+    private IBlogCommentsService blogCommentsService;
+
+    /**
+     * 发表评论
+     */
+    @PostMapping
+    public Result saveComments(@RequestBody BlogComments comments) {
+        return blogCommentsService.saveComments(comments);
+    }
+
+    /**
+     * 查询博客的评论列表
+     */
+    @GetMapping("/{id}")
+    public Result queryCommentsByBlogId(@PathVariable("id") Long blogId) {
+        return blogCommentsService.queryCommentsByBlogId(blogId);
+    }
 }

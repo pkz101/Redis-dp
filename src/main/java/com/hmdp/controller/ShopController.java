@@ -16,8 +16,8 @@ import javax.annotation.Resource;
  * 前端控制器
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * @author zhanp
+ *
  */
 @RestController
 @RequestMapping("/shop")
@@ -68,9 +68,11 @@ public class ShopController {
     @GetMapping("/of/type")
     public Result queryShopByType(
             @RequestParam("typeId") Integer typeId,
-            @RequestParam(value = "current", defaultValue = "1") Integer current
+            @RequestParam(value = "current", defaultValue = "1") Integer current,
+            @RequestParam(value = "x", required = false) Double x,
+            @RequestParam(value = "y", required = false) Double y
     ) {
-        return shopService.queryShopByType(typeId, current);
+        return shopService.queryShopByType(typeId, current, x, y);
     }
 
     /**
@@ -92,19 +94,5 @@ public class ShopController {
         return Result.ok(page.getRecords());
     }
 
-    /**
-     * 根据坐标查询附近商铺
-     * @param x 经度
-     * @param y 纬度
-     * @param current 页码
-     * @return 商铺列表（含距离）
-     */
-    @GetMapping("/nearby")
-    public Result queryShopByGeo(
-            @RequestParam("x") Double x,
-            @RequestParam("y") Double y,
-            @RequestParam(value = "current", defaultValue = "1") Integer current
-    ) {
-        return shopService.queryShopByGeo(x, y, current);
-    }
+
 }

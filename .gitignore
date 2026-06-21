@@ -18,6 +18,9 @@ target/
 *.iws
 *.iml
 *.ipr
+*.swp
+*.swo
+*~
 
 ### NetBeans ###
 /nbproject/private/
@@ -31,3 +34,89 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+$RECYCLE.BIN/
+
+### Logs ###
+*.log
+logs/
+*.log.*
+*.txt
+
+### Temporary files ###
+*.tmp
+*.temp
+*.cache
+*.pyc
+*.class
+
+### Maven ###
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+
+
+### Java ###
+*.jar
+*.war
+*.ear
+
+### Node (if using frontend) ###
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+### Environment variables ###
+.env
+.env.local
+.env.*.local
+
+### Upload files ###
+upload/
+uploads/
+static/upload/
+
+### Database ###
+*.db
+*.sqlite
+*.h2.db
+
+### Redis dump ###
+dump.rdb
+appendonly.aof
+
+### Session data ###
+sessions/
+*.session
+
+### Test coverage ###
+coverage/
+*.gcov
+jacoco/
+.jacoco-aggregate
+
+### IDE specific ###
+*.orig
