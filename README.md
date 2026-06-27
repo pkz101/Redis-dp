@@ -199,5 +199,3 @@ stringRedisTemplate.delete(CACHE_SHOP_KEY + id); // 2. 再删除缓存
 8. ✅ 数据库与缓存双写一致性策略
 
 ---
-
-*项目源自黑马程序员 Redis 实战课程*
