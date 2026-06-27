@@ -1,4 +1,4 @@
-# 🍽️ 黑马点评 (hm-dianping)
+# 🍽️ 点评 (dianping)
 
 基于 Spring Boot + Redis 的点评类 Web 应用，重点学习并解决各种 Redis 缓存问题。
 
